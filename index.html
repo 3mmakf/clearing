@@ -1,340 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cove is a concept resort designed for families including members with intellectual or developmental disabilities. A vacation for everyone, including you.">
-<title>Cove Resort | A vacation for everyone. Including you.</title>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500&display=swap" rel="stylesheet">
-<style>
-:root{--char:#333138;--lilac:#C6A9C1;--sage:#73956F;--cream:#FFF6EA;--terra:#CA6641;--blue:#79ADDC;--deep:#1f2b25;--sand:#f3e7d6;--fs:100%}
-*{box-sizing:border-box}
-html{font-size:var(--fs);scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--char);font:1rem/1.75 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
-h1,h2,h3,.brand,.big{font-family:Lexend,"Helvetica Neue",Arial,sans-serif;font-weight:300;letter-spacing:-.025em;line-height:1.12;margin:0}
-h2{font-size:clamp(2rem,4.4vw,3.6rem)}
-p{margin:0 0 1em;max-width:56ch}
-a{color:inherit;text-underline-offset:4px}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:12px 18px;border-radius:8px;z-index:60}
-.skip:focus{left:8px}
-.btn{display:inline-flex;align-items:center;min-height:52px;padding:13px 32px;border-radius:100px;background:#b5573a;color:#fff;font:400 1rem Lexend,sans-serif;text-decoration:none;border:0;cursor:pointer}
-.btn:hover{background:#9c472d}
-.btn.ghost{background:transparent;border:1.5px solid #fff}
-.btn.ghost:hover{background:rgba(255,255,255,.2)}
-/* experience cards */
-.experiences{padding:100px 0;background:var(--cream)}
-.experiences .eyebrow{color:#9a4b32;font:500 .9rem Lexend,sans-serif;text-transform:uppercase;letter-spacing:.13em}
-.experiences h2{max-width:19ch;margin:12px 0 18px}
-.experiences .intro{font-size:1.1rem;color:#55525c;margin-bottom:34px}
-.exp-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.exp-card{border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 8px 30px rgba(20,35,25,.06)}
-.exp-card img{width:100%;height:270px;object-fit:cover;display:block}
-.exp-card .copy{padding:25px}
-.exp-card h3{font-size:1.55rem;margin-bottom:10px}
-.exp-card p{font-size:.98rem;color:#55525c}
-.exp-card a{font-weight:600;color:#8f3e2c}
-@media(max-width:800px){.exp-grid{grid-template-columns:1fr}.exp-card img{height:250px}}
-/* nav */
-header.nav{position:fixed;top:0;left:0;right:0;z-index:30;color:#fff;transition:background .3s}
-header.nav.solid{background:rgba(31,43,37,.97)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:84px;max-width:1360px}
-.brand{font-size:2rem;font-weight:400;text-decoration:none}
-.brand i{color:#e58a67;font-style:normal}
-.nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
-.nav ul a{display:block;padding:12px 16px;text-decoration:none;border-radius:100px}
-.nav ul a:hover{background:rgba(255,255,255,.18)}
-/* Booking action stays prominent; display controls live in the footer. */
-.nav-book{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 19px;border-radius:100px;background:#b5573a;color:#fff;text-decoration:none;font:400 .9rem Lexend,sans-serif;white-space:nowrap}
-.nav-book:hover{background:#9c472d}
-.access-settings{margin-top:26px;max-width:460px;border:1px solid #9da99b;border-radius:14px;padding:15px 18px}
-.access-settings summary{cursor:pointer;font:400 1rem Lexend,sans-serif;min-height:30px}
-.access-settings p{font-size:.92rem;line-height:1.6;margin:12px 0}
-.access-actions{display:flex;gap:10px;flex-wrap:wrap}
-.access-actions button{min-height:44px;min-width:54px;padding:8px 14px;border:1px solid #d9ded6;border-radius:10px;background:#fff6ea;color:#1f2b25;font:400 1rem Lexend,sans-serif;cursor:pointer}
-.access-actions button:hover{background:#e5eadf}
-.mobile-access{display:none!important}
-.nav .r{display:flex;align-items:center;gap:10px}
-#menu-toggle{display:none;min-height:44px;padding:8px 15px;border:1px solid #fff;border-radius:20px;background:transparent;color:white;font:400 1rem Lexend,sans-serif;cursor:pointer}
-@media(max-width:1000px){#menu-toggle{display:block}.nav nav{display:none;position:absolute;top:84px;left:0;right:0;background:#1f2b25;padding:16px 28px 24px}.nav nav.open{display:block}.nav ul{display:flex;flex-direction:column;gap:6px}}
-@media(max-width:1000px){.mobile-access{display:block!important}}
-@media(max-width:560px){.nav .wrap{padding:0 16px}.brand{font-size:1.65rem}.nav-book{padding:9px 12px;font-size:.78rem}}
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="The Clearing: a concept mountain resort where thoughtful support makes room for every family member to enjoy their vacation."><title>The Clearing | More room for what matters</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet"><style>
+:root{--forest:#263c32;--green:#4d6856;--sage:#dce4d8;--cream:#faf6ee;--sand:#efe7d9;--terra:#ad6549;--ink:#24352e;--base:100%;--space:1;--readfont:'Helvetica Neue',Helvetica,Arial,sans-serif}*{box-sizing:border-box}html{font-size:var(--base);scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:400 1rem/1.7 var(--readfont)}h1,h2,h3,.logo,.eyebrow,.button,.navlinks{font-family:Lexend,Arial,sans-serif}h1,h2,h3{font-weight:300;line-height:1.14;letter-spacing:-.045em;margin:0}h2{font-size:clamp(2.25rem,4.6vw,4.5rem)}h3{font-size:1.55rem}p{margin:0 0 1rem}a{color:inherit}button,input{font:inherit}button{cursor:pointer}:focus-visible{outline:3px solid #db8c50;outline-offset:4px}.wrap{max-width:1240px;padding:0 30px;margin:auto}.skip{position:absolute;top:-100px;left:12px;background:#fff;color:#111;padding:12px;z-index:100}.skip:focus{top:12px}.eyebrow{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500}.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:var(--terra);color:white;border:2px solid var(--terra);padding:14px 24px;border-radius:4px;min-height:50px;font-size:.92rem;font-weight:500}.button:hover{background:#8b4c34}.button.outline{background:transparent;border-color:currentColor;color:inherit}.button.outline:hover{background:#ffffff20}.nav{position:absolute;z-index:30;top:0;width:100%;color:#fff;border-bottom:1px solid #ffffff45}.navinner{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{text-decoration:none;font-size:1.45rem;line-height:1.05;letter-spacing:-.06em;font-weight:400;white-space:nowrap}.logo small{display:block;letter-spacing:.23em;text-transform:uppercase;font-size:.51rem;text-align:center;margin-top:7px}.navlinks{display:flex;align-items:center;gap:28px;font-size:.86rem}.navlinks a{text-decoration:none}.navlinks a:hover{text-decoration:underline}.nav .button{padding:10px 16px;font-size:.82rem;min-height:44px}.menu{display:none;background:transparent;color:#fff;border:1px solid #fff;padding:10px 13px}.hero{min-height:780px;min-height:100svh;position:relative;display:flex;align-items:end;color:#fff;overflow:hidden;background:#263c32}.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .7s;background-position:center;background-size:cover}.hero-slide.active{opacity:1}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#14291fdc 0%,#14291f66 62%,#14291f22 100%),linear-gradient(0deg,#14291fbb,transparent 50%);z-index:1}.hero-content{position:relative;z-index:2;width:100%;padding-top:165px;padding-bottom:110px}.hero h1{font-size:clamp(3.4rem,7vw,7rem);max-width:880px;margin:16px 0 24px}.hero h1 em{font-style:normal;color:#e7d2b4}.hero p{font-size:clamp(1.04rem,1.5vw,1.28rem);max-width:620px;line-height:1.65}.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}.slider-controls{position:absolute;right:30px;bottom:36px;z-index:3;display:flex;align-items:center;gap:12px}.slider-controls button{background:#17382bbd;color:#fff;border:1px solid #ffffffaa;width:44px;height:44px;border-radius:50%}.slide-status{font-family:Lexend;font-size:.85rem}.intro{padding:105px 0;background:var(--cream)}.intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:start}.intro h2{margin:0 0 28px}.intro p{font-size:1.14rem;max-width:620px}.accent{color:var(--terra)}.statement{background:var(--sage);padding:75px 0;text-align:center}.statement blockquote{font:300 clamp(1.65rem,3.2vw,3rem)/1.35 Lexend,sans-serif;letter-spacing:-.035em;max-width:940px;margin:0 auto 15px}.statement .eyebrow{color:#536d5a}.section{padding:110px 0}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:36px}.section-heading p{max-width:410px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border-radius:6px;overflow:hidden}.card img{width:100%;height:310px;object-fit:cover;display:block}.card .inside{padding:30px}.card h3{margin:8px 0 14px}.card .eyebrow{color:var(--terra)}.care{background:var(--forest);color:#fff}.care-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.care img{width:100%;height:620px;object-fit:cover;border-radius:5px}.care h2{margin:14px 0 24px}.care .lead{font-size:1.15rem;color:#e2e9de}.proof{padding:20px 0;border-top:1px solid #ffffff50}.proof strong{display:block;font:400 1.08rem Lexend;margin-bottom:4px}.proof p{color:#e2e9de;margin:0}.choice{background:#eee8dc}.choice h2{margin:12px 0 22px}.choice .lede{max-width:760px;font-size:1.13rem}.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 24px}.tabs button{background:transparent;border:1px solid var(--forest);padding:12px 19px;min-height:48px;border-radius:4px;color:var(--forest)}.tabs button[aria-pressed=true]{background:var(--forest);color:white}.tabgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.tabpane{padding:36px;background:white;border-radius:5px}.tabpane:nth-child(2){background:var(--sage)}.tabpane h3{margin-bottom:10px}.belong{position:relative;background:linear-gradient(90deg,#1d3529e8,#1d352988),url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=2000&q=85') center/cover;color:white;padding:140px 0}.belong h2{max-width:770px;margin:15px 0 22px}.belong p{max-width:620px;font-size:1.15rem}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}.step{padding:25px;background:#fff;border-top:3px solid var(--terra)}.step span{font:400 1.05rem Lexend;color:var(--terra)}.step h3{font-size:1.1rem;margin:15px 0 10px}.step p{font-size:.96rem}.closing{background:var(--forest);color:white;text-align:center;padding:105px 0}.closing h2{margin:12px auto 25px;max-width:760px}.closing p{max-width:650px;margin:0 auto 25px}footer{background:#16291f;color:#fff;padding:55px 0 30px}.footgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}.footgrid a{display:block;margin:9px 0;text-decoration:none}.footgrid a:hover{text-decoration:underline}.fine{font-size:.83rem;opacity:.8;margin-top:35px}.access-panel{margin-top:28px;border-top:1px solid #ffffff66;padding-top:20px;max-width:720px}.access-panel summary{cursor:pointer;font:400 1rem Lexend;padding:8px 0}.access-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:15px 0}.access-controls label{display:flex;align-items:center;gap:10px;border:1px solid #ffffff77;padding:10px;border-radius:4px}.access-controls input{width:20px;height:20px;accent-color:#e0ac87}.access-actions{display:flex;gap:10px;flex-wrap:wrap}.access-actions button{border:1px solid #fff;background:transparent;color:#fff;padding:10px 14px;min-height:44px}.notice{font-size:.82rem;opacity:.83;margin-top:12px}.pref-contrast{--cream:#fff;--sand:#fff;--sage:#e5e5e5;--ink:#000;--forest:#000;--terra:#8e3818}.pref-contrast .hero:before{background:#000b}.pref-spacing body{letter-spacing:.04em;word-spacing:.12em;line-height:2}.pref-simple body,.pref-simple h1,.pref-simple h2,.pref-simple h3,.pref-simple .logo{font-family:Arial,sans-serif!important}.pref-links a{text-decoration:underline!important}.pref-motion *, .pref-motion *:before{transition:none!important;animation:none!important;scroll-behavior:auto!important}@media(prefers-reduced-motion:reduce){*,*:before{scroll-behavior:auto!important;transition:none!important}}@media(max-width:980px){.navlinks{display:none;position:absolute;top:92px;left:0;right:0;background:var(--forest);padding:25px 30px;flex-direction:column;align-items:start}.navlinks.open{display:flex}.menu{display:block}.navinner>.button{margin-left:auto}.intro-grid,.care-grid{gap:35px}.cards{gap:12px}.card img{height:240px}}@media(max-width:700px){.wrap{padding:0 20px}.navinner{min-height:78px}.navlinks{top:78px}.navinner>.button{font-size:.75rem;padding:8px 10px}.hero{min-height:710px}.hero-content{padding-bottom:125px}.hero h1{font-size:clamp(2.9rem,12vw,4.7rem)}.intro-grid,.care-grid,.tabgrid,.footgrid{grid-template-columns:1fr}.intro,.section{padding:75px 0}.intro-grid{gap:20px}.section-heading{display:block}.cards{grid-template-columns:1fr}.card img{height:260px}.care img{height:300px}.steps{grid-template-columns:1fr 1fr}.slider-controls{right:20px;bottom:24px}.access-controls{grid-template-columns:1fr}}@media(max-width:440px){.steps{grid-template-columns:1fr}.navinner>.button{display:none}}
+/* Carousel arrows at opposite sides of hero */
+.slider-controls{position:absolute;inset:0;z-index:3;pointer-events:none;display:block}
+.slider-controls button{pointer-events:auto;position:absolute;top:50%;transform:translateY(-50%);width:auto;min-width:52px;height:52px;padding:0 15px;display:flex;align-items:center;gap:9px;justify-content:center;font:500 .9rem Lexend,sans-serif;cursor:pointer;transition:background .2s}
+.slider-controls button:hover{background:#17382bf2}
+.slider-controls #prev{left:20px}
+.slider-controls #next{right:20px}
+.slider-controls .slide-status{position:absolute;right:28px;bottom:28px;pointer-events:none;background:#17382bbd;padding:5px 12px;border-radius:18px}
+@media(max-width:760px){.slider-controls button{width:46px;min-width:46px;height:46px;padding:0}.slider-controls .arrow-label{display:none}.slider-controls #prev{left:10px}.slider-controls #next{right:10px}.slider-controls .slide-status{bottom:15px;right:16px}}
 
-/* hero */
-.destination-tag{font:500 .78rem/1.5 Lexend,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#fff3dd;margin:-4px 0 20px;max-width:none}
+/* Image-led resort gallery — swap image src values for final resort renderings */
+.resort-gallery{background:#eee8dc}.gallery-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:repeat(2,minmax(245px,290px));gap:16px}.gallery-grid figure{position:relative;margin:0;overflow:hidden;border-radius:6px;background:#d9d6cc}.gallery-grid img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}.gallery-grid figure:hover img{transform:scale(1.025)}.gallery-grid figure:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(12,31,23,.78));pointer-events:none}.gallery-feature{grid-row:span 2}.gallery-grid figcaption{position:absolute;z-index:1;bottom:24px;left:26px;right:20px;color:white}.gallery-grid figcaption span{display:block;font:500 .73rem Lexend,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin-bottom:7px}.gallery-grid figcaption strong{display:block;font:300 clamp(1.2rem,2vw,1.9rem) Lexend,sans-serif;line-height:1.25}.gallery-feature figcaption strong{font-size:clamp(1.7rem,3vw,2.6rem)}.gallery-note{font-size:.83rem;opacity:.8;margin-top:20px}@media(max-width:850px){.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.gallery-feature{grid-column:span 2;grid-row:auto;height:420px}.gallery-tile{height:240px}}@media(max-width:500px){.gallery-grid{gap:10px}.gallery-feature{height:340px}.gallery-tile{height:190px}.gallery-grid figcaption{bottom:15px;left:15px}.gallery-grid figcaption strong{font-size:1.15rem}}@media(prefers-reduced-motion:reduce){.gallery-grid img{transition:none}}
 
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;background:#2f4a3e;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(18,26,22,.88) 0%,rgba(18,26,22,.3) 60%,rgba(18,26,22,.55) 100%)}
-.hero-slides{position:absolute;inset:0;z-index:0}
-.hero-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .5s ease,visibility .5s ease;background-size:cover;background-position:center}
-.hero-slide.active{opacity:1;visibility:visible}
-.hero .wrap{z-index:2}
-.hero-controls{display:flex;align-items:center;gap:12px;margin:0 0 20px}
-.hero-controls button{min-width:44px;min-height:44px;border:1.5px solid rgba(255,255,255,.8);background:rgba(15,30,22,.35);border-radius:50%;color:#fff;font:500 1.1rem Lexend,sans-serif;cursor:pointer}
-.hero-controls button:hover{background:rgba(15,30,22,.8)}
-.hero-count{font:400 .9rem Lexend,sans-serif;letter-spacing:.08em}
-@media(prefers-reduced-motion:reduce){.hero-slide{transition:none}}
-.hero .wrap{position:relative;width:100%;padding-bottom:36px;padding-top:140px}
-.hero h1{font-size:clamp(3rem,8vw,7rem);font-weight:200;max-width:11ch;margin-bottom:22px}
-.hero .sub{font-size:clamp(1.05rem,1.6vw,1.3rem);max-width:46ch;margin-bottom:34px}
-.book{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:12px;background:var(--cream);color:var(--char);border-radius:22px;padding:14px;margin-top:10px}
-.book label{display:block;padding:8px 14px;border-radius:12px;font-size:.82rem;color:#55525c}
-.book input,.book select{display:block;width:100%;border:0;background:transparent;font:400 1.1rem Lexend,sans-serif;color:var(--char);padding:2px 0;margin-top:2px}
-.book .btn{border-radius:14px;justify-content:center}
-@media(max-width:860px){.book{grid-template-columns:1fr 1fr}.book .btn{grid-column:1/-1}}
-/* opening */
-.open{padding:clamp(80px,12vw,160px) 0;text-align:center}
-.open .big{font-size:clamp(2.2rem,5.6vw,4.8rem);max-width:17ch;margin:0 auto 34px}
-.open p{margin:0 auto 1em;font-size:1.15rem;color:#55525c}
-.open .big em{font-style:normal;color:var(--terra)}
-/* quote band */
-.said{background:var(--lilac);padding:clamp(70px,10vw,130px) 0}
-.said blockquote{margin:0;font:200 clamp(1.9rem,4.6vw,3.8rem)/1.2 Lexend,sans-serif;letter-spacing:-.025em;max-width:22ch}
-.said p{margin:26px 0 0;font-size:1rem;color:#3c3640}
-/* story panels */
-.panel{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;background-size:cover;background-position:center;background-color:#3d5247}
-.panel::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(18,26,22,.86),rgba(18,26,22,.1) 65%)}
-.panel .wrap{position:relative;width:100%;padding-top:80px;padding-bottom:clamp(48px,8vw,100px)}
-.panel .tag{display:inline-block;background:rgba(255,246,234,.18);border:1px solid rgba(255,246,234,.5);border-radius:100px;padding:5px 16px;font:400 .95rem Lexend,sans-serif;margin-bottom:18px}
-.panel h2{font-size:clamp(2.2rem,6vw,5rem);font-weight:200;max-width:15ch;margin-bottom:18px}
-.panel p{font-size:1.15rem;max-width:44ch;margin:0}
-.p1{background-image:url("https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=2400&q=80")}
-.p2{background-image:url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2400&q=80")}
-.p3{background-image:url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=80")}
-.p4{background-image:url("https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=2400&q=80")}
-.p5{background-image:url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2400&q=80")}
-/* apart */
-.apart{background:var(--deep);color:var(--cream);padding:clamp(80px,11vw,140px) 0}
-.apart h2{margin-bottom:16px;max-width:16ch}
-.apart .lead{color:#d9cfbd;font-size:1.15rem}
-.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0}
-.tabs button{min-height:52px;font:400 1rem Lexend,sans-serif;padding:12px 26px;border-radius:100px;border:1.5px solid var(--cream);background:transparent;color:var(--cream);cursor:pointer}
-.tabs button[aria-pressed="true"]{background:var(--cream);color:var(--deep)}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.pane{border-radius:24px;padding:36px;min-height:210px;background:var(--sage);color:#fff}
-.pane.y{background:var(--lilac);color:var(--char)}
-.pane h3{font-size:1.5rem;margin-bottom:12px}
-.pane p{margin:0;font-size:1.1rem}
-@media(max-width:760px){.split{grid-template-columns:1fr}}
-/* trust */
-.trust{padding:clamp(80px,11vw,140px) 0}
-.trust .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.trust img{display:block;width:100%;height:560px;object-fit:cover;border-radius:28px;background:#3d5247}
-.trust h2{margin-bottom:18px}
-.trust ul{list-style:none;margin:26px 0 0;padding:0}
-.trust li{padding:18px 0;border-top:1px solid rgba(51,49,56,.2)}
-.trust li b{display:block;font:400 1.15rem Lexend,sans-serif}
-.note{font-size:.9rem;color:#55525c}
-@media(max-width:860px){.trust .wrap{grid-template-columns:1fr;gap:34px}.trust img{height:340px}}
-/* plan */
-.plan{background:var(--sand);padding:clamp(70px,10vw,120px) 0}
-.plan ol{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.plan li{background:var(--cream);border-radius:22px;padding:26px}
-.plan li span{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--terra);color:#fff;font:400 1rem Lexend,sans-serif;margin-bottom:16px;background:#b5573a}
-.plan li b{display:block;font:400 1.15rem Lexend,sans-serif;margin-bottom:6px}
-@media(max-width:900px){.plan ol{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.plan ol{grid-template-columns:1fr}}
-/* end */
-.end{position:relative;min-height:80vh;display:flex;align-items:center;color:#fff;background:#3d5247 url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2400&q=80") center/cover}
-.end::before{content:"";position:absolute;inset:0;background:rgba(18,26,22,.62)}
-.end .wrap{position:relative}
-.end h2{font-size:clamp(2.4rem,6vw,5rem);font-weight:200;max-width:14ch;margin-bottom:20px}
-.end small{display:block;margin-top:22px;opacity:.9}
-footer{background:var(--deep);color:#eee7d9;padding:56px 0 30px}
-footer .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
-footer a{display:block;padding:6px 0;text-decoration:none}
-footer a:hover{text-decoration:underline}
-footer .brand{font-size:1.7rem}
-footer small{display:block;margin-top:28px;color:#bdb5a6}
-@media(max-width:700px){footer .g{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}header.nav{transition:none}}
-
-/* Optional visitor display preferences */
-.access-settings{max-width:680px}
-.access-settings fieldset{border:0;padding:0;margin:18px 0 0}
-.access-settings legend{font:400 1rem Lexend,sans-serif;margin-bottom:10px}
-.access-settings .setting-note{font-size:.85rem;opacity:.9}
-.access-settings .setting-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.access-settings label.setting{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #9da99b;border-radius:12px;cursor:pointer;min-height:52px}
-.access-settings input[type=checkbox]{width:20px;height:20px;accent-color:#b5573a;flex-shrink:0}
-.access-settings .access-actions{margin-top:12px}
-@media(max-width:540px){.access-settings .setting-grid{grid-template-columns:1fr}}
-html.pref-spacing body{letter-spacing:.045em;word-spacing:.12em;line-height:2}
-html.pref-spacing p,html.pref-spacing li{line-height:2}
-html.pref-readable body,html.pref-readable h1,html.pref-readable h2,html.pref-readable h3,html.pref-readable .brand,html.pref-readable .big{font-family:Arial,Helvetica,sans-serif!important}
-html.pref-readable h1,html.pref-readable h2,html.pref-readable h3{letter-spacing:normal;font-weight:500}
-html.pref-links a:not(.btn):not(.nav-book){text-decoration:underline!important;text-decoration-thickness:2px;text-underline-offset:4px}
-html.pref-motion,html.pref-motion *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
-html.pref-contrast{--char:#101010;--cream:#fff;--sand:#fff;--deep:#090909;--sage:#20572a;--lilac:#fff}
-html.pref-contrast body{background:#fff;color:#101010}
-html.pref-contrast .open p,html.pref-contrast .experiences .intro,html.pref-contrast .exp-card p,html.pref-contrast .note{color:#111}
-html.pref-contrast .exp-card,html.pref-contrast .plan li{border:2px solid #111}
-html.pref-contrast .access-settings{border-color:#fff}
-html.pref-contrast :focus-visible{outline:4px solid #ffcf33;outline-offset:4px}
-</style>
-</head>
-<body>
-<a class="skip" href="#main">Skip to main content</a>
-<header class="nav" id="nav"><div class="wrap">
-  <a class="brand" href="#top" aria-label="Cove, home">cove<i>.</i></a>
-  <nav id="main-nav" aria-label="Main"><ul>
-    <li><a href="#for-you">For you</a></li>
-    <li><a href="#for-family">For your family</a></li>
-    <li><a href="#care">The Way We Care</a></li>
-    <li><a href="#plan">Plan Your Stay</a></li>
-    <li class="mobile-access"><a href="#accessibility-settings">Accessibility settings</a></li>
-  </ul></nav>
-  <div class="r"><a class="nav-book" href="#plan">Book Your Stay</a><button id="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false">Menu</button></div>
-</div></header>
-
-<main id="main">
-<section class="hero" id="top" aria-labelledby="h1">
-  <!-- Concept image placeholders: replace with licensed, consented photos authentically representing families with children and adult family members with disabilities. Do not imply pictured people have disabilities. -->
-  <div class="hero-slides" aria-hidden="true">
-    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=2400&q=85')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=2400&q=85')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=2400&q=85')"></div>
-  </div>
-  <div class="wrap">
-  <div class="hero-controls" role="group" aria-label="Hero photograph carousel">
-    <button type="button" id="hero-prev" aria-label="Previous photograph">&#8592;</button>
-    <button type="button" id="hero-next" aria-label="Next photograph">&#8594;</button>
-  </div>
-  <h1 id="h1">A vacation for everyone. Including you.</h1>
-  <p class="destination-tag">NORTH GEORGIA MOUNTAINS</p>
-  <p class="sub">Tucked into the North Georgia mountains, a new kind of family getaway: mountain air, memorable adventures, and thoughtful support that makes room for everyone to enjoy their vacation.</p>
-  <form class="book" onsubmit="event.preventDefault();location.hash='plan'" aria-label="Explore your stay">
-    <label>Arrive<input type="date" aria-label="Arrival date"></label>
-    <label>Depart<input type="date" aria-label="Departure date"></label>
-    <label>Who's coming<select aria-label="Who is coming"><option>2 adults, 1 child</option><option>2 adults, 2 children</option><option>1 adult, 1 child</option><option>2 adults, 3 children</option><option>Adults traveling together</option><option>Other family group</option></select></label>
-    <button class="btn" type="submit">Explore your stay</button>
-  </form>
-</div></section>
-
-<section class="open" aria-labelledby="o-title"><div class="wrap">
-  <h2 class="big" id="o-title">Mountain days where <em>everyone belongs.</em></h2>
-  <p>Imagine slow mornings with mountain views, fresh-air adventures, and evenings around the fire. A getaway shaped around your family, with room for every guest to enjoy it their way.</p>
-</div></section>
-
-<section class="experiences" id="experiences" aria-labelledby="exp-title"><div class="wrap">
-  <span class="eyebrow">Discover Cove</span>
-  <h2 id="exp-title">A little something for everyone.</h2>
-  <p class="intro">From peaceful mountain mornings to shared discoveries outdoors, everyone can find something to look forward to.</p>
-  <div class="exp-grid">
-    <article class="exp-card" id="for-you"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Relaxing spa experience" loading="lazy"><div class="copy"><h3>For You</h3><p>Coffee overlooking the ridgeline, a spa afternoon, elevated dining, or the freedom to do absolutely nothing.</p><a href="#your-way">Make time for you</a></div></article>
-    <article class="exp-card" id="for-family"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="Mountain lake and wooded ridgeline, illustrating the proposed destination" loading="lazy"><div class="copy"><h3>For Your Family</h3><p>Nature discovery, creative activities, and mountain experiences designed around each guest’s interests and access needs.</p><a href="#care">See how we support guests</a></div></article>
-    <article class="exp-card"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Sunlight filtering through a forest, representing shared mountain experiences" loading="lazy"><div class="copy"><h3>Better Together</h3><p>Fireside evenings, accessible scenic outings, and unhurried meals with the people you love.</p><a href="#belong">Find your people</a></div></article>
-  </div>
-</div></section>
-
-<section class="panel p5" id="belong" aria-labelledby="s5"><div class="wrap">
-  <span class="tag">Belong</span><h2 id="s5">Come as you are.</h2>
-  <p>There's no need to explain your family's way of doing things. Find space to connect with others, or enjoy the day in your own way.</p>
-</div></section>
-
-<section class="apart" id="your-way" aria-labelledby="a-title"><div class="wrap">
-  <h2 id="a-title">Your vacation, your way.</h2>
-  <p class="lead">Choose time together, independent experiences, or a little of both. Your preferences lead the way.</p>
-  <div class="tabs" role="group" aria-label="How much time apart">
-    <button type="button" aria-pressed="true" data-k="0">A shared morning</button>
-    <button type="button" aria-pressed="false" data-k="1">Different adventures</button>
-    <button type="button" aria-pressed="false" data-k="2">A flexible day</button>
-  </div>
-  <div class="split" aria-live="polite">
-    <div class="pane y"><h3>You</h3><p id="you"></p></div>
-    <div class="pane"><h3>Your family member</h3><p id="kid"></p></div>
-  </div>
-</div></section>
-
-<section class="trust" id="care" aria-labelledby="c-title"><div class="wrap">
-  <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80" alt="A welcoming, calm resort interior" loading="lazy">
-  <div>
-    <h2 id="c-title">The Way We Care</h2>
-    <p>Feeling confident begins with clear information, meaningful choices, and support tailored to the individual. Here is what we propose to build into the experience.</p>
-    <ul>
-      <li><b>Built for this from day one</b>Proposed step-free routes between suites and amenities, quiet spaces, and accessible ways to experience the mountain setting.</li>
-      <li><b>Training and credentials</b>Proposed staff preparation and third-party certification, subject to operational verification.</li>
-      <li><b>Care you can see</b>Proposed on-site clinical support and staff with relevant experience, subject to feasibility review.</li>
-      <li><b>Clear before you book</b>Room details, photos, and measurements on every page.</li>
-    </ul>
-    <p class="note" style="margin-top:14px">Concept note: certifications, staffing, and features are proposed.</p>
-  </div>
-</div></section>
-
-<section class="plan" id="plan" aria-labelledby="p-title"><div class="wrap">
-  <h2 id="p-title">Your mountain getaway, made easier.</h2>
-  <ol>
-    <li><span>1</span><b>Tell us about your family</b>Share each guest’s interests, routines, and preferred supports.</li>
-    <li><span>2</span><b>Pick your suite</b>Photos, floor plans, and measurements, so you know before you book.</li>
-    <li><span>3</span><b>Preview the visit</b>An optional visual guide to the property, routes, and activities to explore before arrival.</li>
-    <li><span>4</span><b>Choose your experiences</b>Plan shared activities, individual interests, and time to unwind.</li>
-  </ol>
-</div></section>
-
-<section class="end" aria-labelledby="e-title"><div class="wrap">
-  <h2 id="e-title">A mountain getaway worth coming back to.</h2>
-  <p style="font-size:1.2rem">Discover the mountains together, with space for everyone to enjoy the journey.</p>
-  <a class="btn" href="mailto:hello@example.com?subject=Cove%20Resort%20Concept%20Inquiry">Start planning</a>
-</div></section>
-</main>
-
-<footer><div class="wrap">
-  <div class="g">
-    <div><a class="brand" href="#top">cove<i>.</i></a><p>Mountain hospitality, with a place for everyone.</p></div>
-    <div><a href="#for-you">For you</a><a href="#for-family">For your family</a><a href="#care">The Way We Care</a><a href="#plan">Plan Your Stay</a></div>
-    <div><a href="#care">Accessibility information</a><a href="#plan">Contact us</a><a href="#plan">Pre-arrival planning</a></div>
-  </div>
-  <details class="access-settings" id="accessibility-settings">
-    <summary>Accessibility settings</summary>
-    <p>Choose how you’d like to view this website. These settings are optional and do not change your browser preferences.</p>
-    <fieldset><legend>Text size</legend>
-      <div class="access-actions" aria-label="Text size controls">
-        <button type="button" id="dn" aria-label="Decrease text size">A−</button>
-        <button type="button" id="up" aria-label="Increase text size">A+</button>
-      </div>
-    </fieldset>
-    <fieldset><legend>Display and reading</legend>
-      <div class="setting-grid">
-        <label class="setting"><input type="checkbox" id="pref-contrast"> Higher contrast</label>
-        <label class="setting"><input type="checkbox" id="pref-spacing"> More text spacing</label>
-        <label class="setting"><input type="checkbox" id="pref-readable"> Simpler font</label>
-        <label class="setting"><input type="checkbox" id="pref-links"> Underline links</label>
-        <label class="setting"><input type="checkbox" id="pref-motion"> Reduce motion</label>
-      </div>
-    </fieldset>
-    <div class="access-actions"><button type="button" id="reset-size">Reset all settings</button></div>
-    <p class="setting-note">You can also use browser zoom, keyboard navigation, and your device’s accessibility tools. These controls are not a substitute for an accessible website.</p>
-  </details>
-  <small>© <span id="y"></span> Cove. Conceptual resort created for an academic project.</small>
-</div></footer>
-
+/* Keep carousel controls away from the hero headline. */
+.slider-controls{position:absolute;inset:auto 28px 28px auto;display:flex;align-items:center;gap:10px;width:auto;z-index:5;pointer-events:auto}
+.slider-controls #prev,.slider-controls #next{position:static;top:auto;left:auto;right:auto;transform:none;width:44px;min-width:44px;height:44px;padding:0;border-radius:50%;font-size:1.25rem}
+.slider-controls .slide-status{position:static;right:auto;bottom:auto;order:-1;background:rgba(23,56,43,.76);padding:7px 13px;border-radius:18px}
+@media(max-width:760px){.slider-controls{right:16px;bottom:16px;gap:7px}.slider-controls #prev,.slider-controls #next{width:40px;min-width:40px;height:40px}}
+</style><style>.slider-controls{display:none!important}.intro-feature{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,78px);align-items:center}.intro-copy .eyebrow{margin-bottom:25px}.intro-copy h2{margin-bottom:26px}.intro-copy p{max-width:56ch}.intro-photo{position:relative;min-height:490px;overflow:hidden;border-radius:5px;background:#dce4d8}.intro-photo img{display:block;width:100%;height:100%;min-height:490px;object-fit:cover}.intro-photo-label{position:absolute;bottom:22px;left:22px;background:#faf6eee8;color:#263c32;padding:10px 17px;font:400 .9rem Lexend,Arial,sans-serif}.slider-controls button{width:52px;min-width:52px;padding:0;font-size:1.6rem}.slider-controls .arrow-label{display:none}@media(max-width:760px){.intro-feature{grid-template-columns:1fr}.intro-photo,.intro-photo img{min-height:310px}.intro-photo img{height:310px}}</style></head><body><a class="skip" href="#main">Skip to main content</a><header class="nav"><div class="wrap navinner"><a href="#top" class="logo" aria-label="The Clearing Resort, home">The Clearing<small>resort</small></a><nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="#experiences">The Experience</a><a href="#care">Our Approach</a><a href="#belong">Belonging</a><a href="#planning">Plan Your Stay</a><a href="#accessibility">Accessibility Settings</a></nav><a class="button" href="#planning">Plan Your Stay</a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">Menu ☰</button></div></header>
+<main id="main"><section class="hero" id="top" aria-label="Welcome to The Clearing"><div class="hero-slide active" role="img" aria-label="Family together in a scenic outdoor setting" style="background-image:url('https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=2200&q=85')"></div><div class="hero-slide" role="img" aria-label="North Georgia mountain landscape" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=85')"></div><div class="hero-slide" role="img" aria-label="Woodland resort atmosphere" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2200&q=85')"></div><div class="wrap hero-content"><div class="eyebrow">A different kind of mountain getaway · North Georgia</div><h1>A vacation for everyone.<br><em>Including you.</em></h1><p>When you know your family is understood and supported, you can finally enjoy the moment. Welcome to a mountain retreat designed to make room for all of you.</p><div class="hero-actions"><a class="button" href="#resort-gallery">Explore The Clearing</a><a class="button outline" href="#care">How we build trust</a></div></div></section>
+<section class="intro" aria-labelledby="intro-title"><div class="wrap intro-feature"><div class="intro-copy"><div class="eyebrow">The idea behind The Clearing</div><h2 id="intro-title">It's hard to unwind when you're still <span class="accent">on alert.</span></h2><p>For many families, a getaway still means planning for every possibility, anticipating needs, and wondering whether someone else will understand.</p><p>We believe a great vacation begins with peace of mind. That's why The Clearing is imagined around thoughtful preparation, personal choice, and experiences that make every guest feel welcome.</p></div><div class="intro-photo"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1300&q=85" alt="Sunlight filtering through a peaceful mountain forest" loading="lazy"><div class="intro-photo-label">Space to feel at ease.</div></div></div></section>
+<section class="statement"><div class="wrap"><div class="eyebrow">Our promise</div><blockquote>Peace of mind makes room for everything else.</blockquote><p>More laughter. More adventure. More time together. And time that's just for you.</p></div></section>
+<section class="section" id="experiences"><div class="wrap"><div class="section-heading"><div><div class="eyebrow accent">Discover your kind of getaway</div><h2>Everyone deserves<br>their own kind of vacation.</h2></div><p>Shared memories and individual moments belong on the same itinerary. Explore the possibilities for your family.</p></div><div class="cards"><article class="card"><img loading="lazy" alt="Spa-inspired resort pool surrounded by nature" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80"><div class="inside"><div class="eyebrow">For you</div><h3>Time to truly unwind.</h3><p>Imagine a slow morning, a mountain-view spa treatment, or dinner without watching the clock.</p></div></article><article class="card"><img loading="lazy" alt="Scenic forest path in a mountain landscape" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"><div class="inside"><div class="eyebrow">For your family</div><h3>Adventure, their way.</h3><p>Proposed experiences range from nature discovery to creative activities and sensory-friendly spaces, tailored to interests and support needs.</p></div></article><article class="card"><img loading="lazy" alt="Outdoor gathering space with warm evening lighting" src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=900&q=80"><div class="inside"><div class="eyebrow">Together</div><h3>Moments worth sharing.</h3><p>Picture fireside evenings, relaxed meals, and the simple joy of being together in a place that gets it.</p></div></article></div></div></section>
+<section class="section care" id="care"><div class="wrap care-grid"><div><div class="eyebrow">The way we care</div><h2>Trust isn't something we ask for. It's something we build.</h2><p class="lead">Feeling secure starts long before check-in. The Clearing is designed as a concept where families can share what matters and know what to expect.</p><div class="proof"><strong>We listen first.</strong><p>Individual preferences, routines, communication styles, and support needs help shape the experience.</p></div><div class="proof"><strong>We make the details clear.</strong><p>Accessible room information, visual previews, and transparent descriptions help families plan with confidence.</p></div><div class="proof"><strong>We keep you connected.</strong><p>Clear communication and flexible check-ins are central to the proposed guest experience.</p></div><div class="proof"><strong>We design for choice.</strong><p>Guests can choose how much time to spend together or independently, without pressure.</p></div><p class="notice">These are proposed features of a student resort concept; staffing and operations would require validation.</p></div><img loading="lazy" alt="Warm and inviting modern lodge interior" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"></div></section>
+<section class="section resort-gallery" id="resort-gallery" aria-labelledby="gallery-title"><div class="wrap"><div class="section-heading"><div><div class="eyebrow accent">Discover the destination</div><h2 id="gallery-title">Explore The Clearing.</h2></div><p>A place to feel at ease, find your own adventures, and make memories together in the North Georgia mountains.</p></div><div class="gallery-grid"><figure class="gallery-feature"><img loading="lazy" src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1600&q=85" alt="Illustrative mountain lodge surrounded by trees"><figcaption><span>The resort</span><strong>A place made for all of you.</strong></figcaption></figure><figure class="gallery-tile"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Illustrative resort suite interior"><figcaption><span>Stay</span><strong>Rooms & suites</strong></figcaption></figure><figure class="gallery-tile"><img loading="lazy" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85" alt="Illustrative wellness and spa experience"><figcaption><span>Unwind</span><strong>Spa & wellness</strong></figcaption></figure><figure class="gallery-tile"><img loading="lazy" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1000&q=85" alt="Illustrative forest landscape"><figcaption><span>Explore</span><strong>Nature & activities</strong></figcaption></figure><figure class="gallery-tile"><img loading="lazy" src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1000&q=85" alt="Illustrative wooded gathering environment"><figcaption><span>Connect</span><strong>Gathering spaces</strong></figcaption></figure></div><p class="gallery-note">Concept imagery shown for layout only. Replace each photograph with your own resort renderings or licensed images.</p></div></section>
+<section class="belong" id="belong"><div class="wrap"><div class="eyebrow">A place to belong</div><h2>Come as you are.<br>Stay as yourselves.</h2><p>There's something powerful about being somewhere you don't have to explain your family. The Clearing imagines a community where differences are expected, individuality is celebrated, and everyone has room to be themselves.</p></div></section>
+<section class="section" id="planning"><div class="wrap"><div class="eyebrow accent">Planning made thoughtful</div><h2>Less uncertainty.<br>More to look forward to.</h2><div class="steps"><div class="step"><span>01</span><h3>Get to know the resort</h3><p>Explore proposed rooms, paths, activities, and access information before deciding.</p></div><div class="step"><span>02</span><h3>Tell us what matters</h3><p>Share preferences, routines, and individual support considerations.</p></div><div class="step"><span>03</span><h3>Preview your visit</h3><p>Imagine a visual guide and clear arrival details to help everyone prepare.</p></div><div class="step"><span>04</span><h3>Make it yours</h3><p>Choose a balance of rest, adventure, and togetherness that feels right.</p></div></div></div></section>
+<section class="closing"><div class="wrap"><div class="eyebrow">The Clearing · North Georgia</div><h2>More room for what matters.</h2><p>An upscale mountain retreat where thoughtful support opens the door to relaxation, adventure, and belonging.</p><a class="button" href="mailto:hello@example.com?subject=The%20Clearing%20Concept%20Inquiry">Get in Touch</a><p class="notice">Student concept only. No reservations are available; contact address is a placeholder.</p></div></section></main>
+<footer><div class="wrap"><div class="footgrid"><div><div class="logo">The Clearing<small style="text-align:left">resort</small></div><p style="max-width:280px;margin-top:20px">A vacation for everyone. Including you.</p></div><div><div class="eyebrow">Explore</div><a href="#experiences">The Experience</a><a href="#care">The Way We Care</a><a href="#belong">Belonging</a><a href="#planning">Plan Your Stay</a></div><div><div class="eyebrow">About</div><p>Proposed destination:<br>North Georgia mountains</p><a href="#accessibility">Accessibility Settings</a></div></div><details class="access-panel" id="accessibility"><summary>Accessibility Settings</summary><p>Personalize how this concept website looks. Your browser's zoom and assistive technology also remain available.</p><div class="access-actions"><button type="button" id="smaller">A− Smaller</button><button type="button" id="larger">A+ Larger</button></div><div class="access-controls"><label><input type="checkbox" data-pref="contrast"> Higher contrast</label><label><input type="checkbox" data-pref="spacing"> More text spacing</label><label><input type="checkbox" data-pref="simple"> Simpler font</label><label><input type="checkbox" data-pref="links"> Underline links</label><label><input type="checkbox" data-pref="motion"> Reduce motion</label></div><div class="access-actions"><button type="button" id="reset">Reset all settings</button></div><p class="notice">These controls do not replace comprehensive accessibility testing.</p></details><p class="fine">© <span id="year"></span> The Clearing. Academic concept. Photography is illustrative and does not depict confirmed resort amenities or represent verified disability experiences.</p></div></footer>
 <script>
-document.getElementById('y').textContent=new Date().getFullYear();
-// Manual carousel: no autoplay, so visitors control motion and reading time.
-var heroSlides=Array.from(document.querySelectorAll('.hero-slide')),heroIndex=0;
-function heroShow(i){heroIndex=(i+heroSlides.length)%heroSlides.length;heroSlides.forEach(function(el,n){el.classList.toggle('active',n===heroIndex)});document.getElementById('hero-count').textContent=String(heroIndex+1).padStart(2,'0')+' / '+String(heroSlides.length).padStart(2,'0')}
-document.getElementById('hero-prev').addEventListener('click',function(){heroShow(heroIndex-1)});
-document.getElementById('hero-next').addEventListener('click',function(){heroShow(heroIndex+1)});
-var n=document.getElementById('nav');function sc(){n.classList.toggle('solid',scrollY>60)}sc();addEventListener('scroll',sc,{passive:true});
-var T=[["Enjoy a slow breakfast or a walk together.","Choose a shared experience or a supported activity that fits their interests."],
-["Explore the spa, a class, or a quiet place to recharge.","Enjoy an age-appropriate experience, with individualized support as needed."],
-["Plan a full day around your own interests, with time to reconnect later.","Choose from a range of activities and moments together, based on each guest's preferences."]];
-var b=document.querySelectorAll('.tabs button');
-function show(i){document.getElementById('you').textContent=T[i][0];document.getElementById('kid').textContent=T[i][1];b.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.k==i)})}
-b.forEach(function(x){x.addEventListener('click',function(){show(+x.dataset.k)})});show(0);
-var s=100;function sz(d){s=Math.max(90,Math.min(150,s+d));document.documentElement.style.setProperty('--fs',s+'%')}
-var toggle=document.getElementById('menu-toggle'),mainNav=document.getElementById('main-nav');
-toggle.addEventListener('click',function(){var open=mainNav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'Close':'Menu'});
-mainNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mainNav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='Menu';if(a.getAttribute('href')==='#accessibility-settings'){document.getElementById('accessibility-settings').open=true}})});
-var prefs=['contrast','spacing','readable','links','motion'];
-function savePrefs(){try{localStorage.setItem('cove-accessibility',JSON.stringify({size:s,options:Object.fromEntries(prefs.map(function(k){return [k,document.getElementById('pref-'+k).checked]}))}))}catch(e){}}
-function setPref(k,on){document.documentElement.classList.toggle('pref-'+k,on);document.getElementById('pref-'+k).checked=on}
-try{var saved=JSON.parse(localStorage.getItem('cove-accessibility')||'{}');if(saved.size>=90&&saved.size<=150){s=saved.size;document.documentElement.style.setProperty('--fs',s+'%')}prefs.forEach(function(k){if(saved.options&&saved.options[k])setPref(k,true)})}catch(e){}
-prefs.forEach(function(k){document.getElementById('pref-'+k).addEventListener('change',function(e){setPref(k,e.target.checked);savePrefs()})});
-document.getElementById('up').onclick=function(){sz(10);savePrefs()};
-document.getElementById('dn').onclick=function(){sz(-10);savePrefs()};
-document.getElementById('reset-size').onclick=function(){s=100;document.documentElement.style.setProperty('--fs','100%');prefs.forEach(function(k){setPref(k,false)});savePrefs()};
-</script>
-</body>
-</html>
+const slides=[...document.querySelectorAll('.hero-slide')];let active=0;function go(n){slides[active].classList.remove('active');active=(n+slides.length)%slides.length;slides[active].classList.add('active');document.getElementById('slide-status').textContent=`${active+1} / ${slides.length}`};
+// Advance gently, but respect reduced-motion preferences and user interaction.
+let autoCarousel=null;const hero=document.querySelector('.hero');const motionQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
+function stopCarousel(){if(autoCarousel){clearInterval(autoCarousel);autoCarousel=null}}
+function startCarousel(){stopCarousel();if(!motionQuery.matches&&!document.documentElement.classList.contains('pref-motion')&&!document.hidden){autoCarousel=setInterval(()=>go(active+1),6500)}}
+hero.addEventListener('mouseenter',stopCarousel);hero.addEventListener('mouseleave',startCarousel);hero.addEventListener('focusin',stopCarousel);hero.addEventListener('focusout',e=>{if(!hero.contains(e.relatedTarget))startCarousel()});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopCarousel();else startCarousel()});
+if(motionQuery.addEventListener)motionQuery.addEventListener('change',startCarousel);startCarousel();
+const menu=document.getElementById('menu'),navlinks=document.getElementById('navlinks');menu.onclick=()=>{const open=navlinks.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))};navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+
+let size=100;const prefs=['contrast','spacing','simple','links','motion'];function save(){try{localStorage.setItem('clearing-prefs',JSON.stringify({size,enabled:prefs.filter(k=>document.documentElement.classList.contains('pref-'+k))}))}catch(e){}}function applySize(){document.documentElement.style.setProperty('--base',size+'%')}try{const data=JSON.parse(localStorage.getItem('clearing-prefs')||'{}');if(data.size>=90&&data.size<=150)size=data.size;applySize();(data.enabled||[]).forEach(k=>{if(prefs.includes(k)){document.documentElement.classList.add('pref-'+k);document.querySelector(`[data-pref="${k}"]`).checked=true}})}catch(e){}document.getElementById('larger').onclick=()=>{size=Math.min(150,size+10);applySize();save()};document.getElementById('smaller').onclick=()=>{size=Math.max(90,size-10);applySize();save()};document.querySelectorAll('[data-pref]').forEach(c=>c.onchange=()=>{document.documentElement.classList.toggle('pref-'+c.dataset.pref,c.checked);save()});document.getElementById('reset').onclick=()=>{size=100;applySize();prefs.forEach(k=>document.documentElement.classList.remove('pref-'+k));document.querySelectorAll('[data-pref]').forEach(c=>c.checked=false);save()};document.getElementById('year').textContent=new Date().getFullYear();
+</script></body></html>
+
